@@ -1,3 +1,13 @@
-import 'destack/build/browser/index.css'
+import 'grapesjs/dist/css/grapes.min.css'
+
 export { getStaticProps } from 'destack/build/server'
-export { ContentProvider as default } from 'destack'
+import { ContentProviderGrapes } from 'destack'
+
+const Index = (props) => {
+  return (
+    <div style={{ height: '100%' }}>
+      <ContentProviderGrapes {...props} />
+    </div>
+  )
+}
+export default Index
